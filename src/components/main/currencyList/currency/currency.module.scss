@@ -1,0 +1,74 @@
+.rateBlock{
+    padding: 20px 0;
+    display: flex;
+}
+
+.rateBlock:not(:last-child){
+    border-bottom: 1px solid #000;
+}
+
+
+.valuteValue{
+    text-align: center;
+}
+
+
+.valuteCode{
+    width: 10%;
+    cursor: pointer;
+}
+
+.valuteCode:hover{
+    transition: all 0.2s;
+    font-weight: 700;
+}
+
+
+.valutePrice{
+    width: 45%;
+}
+
+.valuteChanges{
+    width: 45%;
+}
+
+
+.valuteCode {
+    position: relative;
+    display: block;
+    color: black
+}
+
+.valuteCode .tooltipText {
+    visibility: hidden;
+    width: 180px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-weight: 400;
+    background-color: #555;
+
+    bottom: 100%;
+    left: 50%;
+
+    margin-left: -90px;
+    margin-bottom: 10px;
+}
+
+.valuteCode:hover .tooltipText {
+    visibility: visible;
+}
+
+.valuteCode .tooltipText::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
